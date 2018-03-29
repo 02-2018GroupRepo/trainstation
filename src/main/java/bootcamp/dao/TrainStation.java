@@ -51,7 +51,7 @@ public class TrainStation {
 	
 	
 	public TrainStation(String location, int passengerCount) {
-		super();
+		//super();
 		this.location = location;
 		this.passengerCount = passengerCount;
 	}

@@ -30,14 +30,17 @@ class PassengerAmtSpec extends Specification {
 		String location = "Miami";
 		int partySize = 4;
 		when: "destination is valid"
-		boolean isValid = TrainStation.validateDestination(destination.toLowerCase(), location.toLowerCase());
+		TrainStation trainStationInstance = new TrainStation("atlanta", 50);
+		TrainStation fakeTrainStation = Stub(TrainStation.class);
+		fakeTrainStation.validateDestination(destination, location) >> true;
+		boolean isValid = trainStationInstance.validateDestination(destination.toLowerCase(), location.toLowerCase());
 		and: "seats are available"
-		boolean isAvailable = TrainStation.validateSeatCount(partySize);
+		boolean isAvailable = trainStationInstance.validateSeatCount(partySize);
 		then: "send confirmation message"
 		if (isAvailable) {
 			System.out.println("Confirmed");
 		} else {
-			System.out.println("Train is full.")
+			System.out.println("Train is full.");
 		}
 		
 	}
