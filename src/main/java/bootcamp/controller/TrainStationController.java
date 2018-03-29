@@ -31,7 +31,7 @@ import bootcamp.dao.TrainStation;
 import java.util.ArrayList;
 
 @RestController
-public class GreetingController {
+public class TrainStationController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
