@@ -64,6 +64,17 @@ public class TrainDatabase {
 		miamiDestinations.add(atlanta);
 		miamiDestinations.add(houston);
 		
+		ArrayList<TrainStation> laDestinations = new ArrayList<TrainStation>();
+		laDestinations.add(seattle);
+		laDestinations.add(houston);
+		laDestinations.add(denver);
+		
+		ArrayList<TrainStation> newyorkDestinations = new ArrayList<TrainStation>();
+		newyorkDestinations.add(seattle);
+		newyorkDestinations.add(houston);
+		newyorkDestinations.add(denver);
+		
+		
 		
 		
 		HashMap<String, ArrayList<TrainStation>> db = new HashMap<>();
@@ -73,6 +84,8 @@ public class TrainDatabase {
 		db.put("seattle", seattleDestinations);
 		db.put("denver", denverDestinations);
 		db.put("chicago", chicagoDestinations);
+		db.put("la", laDestinations);
+		db.put("newyork", newyorkDestinations);
 		
 		TrainDatabase.trainDatabase = db;
 		
