@@ -90,12 +90,10 @@ public class TrainStation {
 		}
 	}
 	
-	public static boolean validateDestination(String destination, String location) {
+	public boolean validateDestination(String destination, String location) {
 		ArrayList<TrainStation> locationDestinations = TrainStation.trainDatabase.get(location);
 		
 		for (TrainStation station : locationDestinations) {
-			System.out.println(station.getLocation());
-			System.out.println(destination);
 			if (station.getLocation().equalsIgnoreCase(destination)) {
 				return true;
 			}
